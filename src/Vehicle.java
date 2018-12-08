@@ -1,8 +1,11 @@
 import java.util.*;
 
+// Create a concrete class named Vehicle that implements the Engine and Chassis interfaces with the following:
+
 public class Vehicle implements Engine, Chassis{
 
-  Date vehicleManufacturedDate;
+  // create the following private instance variables
+  Date vehicleManufacturedDate; 
   String vehicleManufacturer;
   String vehicleMake;
   String vehicleModel;
@@ -11,7 +14,7 @@ public class Vehicle implements Engine, Chassis{
   String driveTrain;
   Engine vehicleEngine;
 
-  public Vehicle(){
+  public Vehicle(){ // a public default constructor with no parameters and initialize all instance variables
     this.vehicleManufacturedDate = new Date();
     this.vehicleManufacturer = "Generic";
     this.vehicleMake = "Generic";
@@ -23,7 +26,7 @@ public class Vehicle implements Engine, Chassis{
     this.vehicleEngine.setDriveTrain("Generic");
   }
 
-  public Vehicle(
+  public Vehicle( // a public overloaded constructor with values for all variables
       Date vehicleManufacturedDate,
       String vehicleManufacturer,
       String vehicleMake,
@@ -41,7 +44,7 @@ public class Vehicle implements Engine, Chassis{
     this.vehicleEngine = engine;
 
   }
-
+  // public method implementations for Engine and Chassis interfaces
   @Override
   public Chassis getChassisType() {
     return null;
@@ -87,12 +90,12 @@ public class Vehicle implements Engine, Chassis{
     this.vehicleEngine.setEngineType(fuel);
   }
 
-  public String toString() {
-    return "Manufacturer Name : " + this.vehicleManufacturer + "\n"
-        + "Manufactured Date : " + this.vehicleManufacturedDate.toString() + "\n"
-        + "Vehicle Make : " + this.vehicleMake + "\n"
-        + "Vehicle Model : " + this.vehicleModel + "\n"
-        + "Vehicle Type : " + this.vehicleType + "\n"
+  public String toString() { // A public toString method that returns the following:
+    return "Manufacturer Name : " + this.vehicleManufacturer + "\n" // Manufacturer Name : Generic
+        + "Manufactured Date : " + this.vehicleManufacturedDate.toString() + "\n" // Manufactured Date :
+        + "Vehicle Make : " + this.vehicleMake + "\n" // Vehicle Make : Generic
+        + "Vehicle Model : " + this.vehicleModel + "\n" // Vehicle Model : Generic
+        + "Vehicle Type : " + this.vehicleType + "\n" // Vehicle Type : None
         + vehicleEngine.toString();
   }
 }

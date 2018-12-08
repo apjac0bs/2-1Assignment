@@ -1,7 +1,8 @@
 import java.util.*;
 
 // Create an interface Engine with the following list of public method definitions that return a void:
-public interface Engine {
+// Added void to the public methods given in example.
+public interface Engine { 
 
   public void setEngineCylinders(int engineCylinders);
 

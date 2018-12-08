@@ -1,11 +1,9 @@
-/**
- *
- */
 
-//  Create an interface named Chassis.  Add the following to the interface:
-//    A public constant string named chassis with a value of “Chassis”.
-//    The definition of a public getChassisType method that returns an instance of Chassis.
-//    The definition of a public setChassisType that accepts a string named vehicleChassis and returns a void.
+
+//  *Create an interface named Chassis with these following requirements:
+//    -A public constant string named chassis with a value of “Chassis”.
+//    -The definition of a public getChassisType method that returns an instance of Chassis.
+//    -The definition of a public setChassisType that accepts a string named vehicleChassis and returns a void.
 
 public interface Chassis {
 

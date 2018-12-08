@@ -1,12 +1,13 @@
 import java.util.*;
 
+// create concrete class named car 
 public final class Car extends Vehicle {
 
-  private Feature[] feature = new Feature[10];
+  private Feature[] feature = new Feature[10]; // initialize private variables
   private int carAxle;
 
-  public Car() {
-    super();
+  public Car() { // public default constructor with no parameters
+    super(); // intialize all variables with generic by using super() call
 
     Feature[] feature = {new InteriorFeature("No Interior Features"),
         new ExteriorFeature("No Exterior Features")};
@@ -16,7 +17,7 @@ public final class Car extends Vehicle {
   }
 
 
-  public Car(
+  public Car( // public overloaded constructor with super() method 
       Date vehicleManufacturedDate,
       String vehicleManufacturer,
       String vehicleMake,
@@ -28,13 +29,13 @@ public final class Car extends Vehicle {
       Feature[] feature,
       int carAxle) {
     super(vehicleManufacturedDate, vehicleManufacturer, vehicleMake
-        , vehicleModel, vehicleFrame, vehicleType, driveTrain, vehicleEngine);
+        , vehicleModel, vehicleFrame, vehicleType, driveTrain, vehicleEngine); // instantiates all values above
 
     this.feature = feature;
     this.carAxle = carAxle;
   }
 
-  public String getExteriorFeatures() {
+  public String getExteriorFeatures() { // public method to return formatted string of exterior features
     String exlist = "";
     for (int i = 0; i < this.feature.length; i++) {
       if (this.feature[i] instanceof ExteriorFeature) {
@@ -49,7 +50,7 @@ public final class Car extends Vehicle {
   }
 
 
-  public String getInteriorFeatures() {
+  public String getInteriorFeatures() { // public method to return formatted string of interior features
     String inlist = "";
     for (int i = 0; i < this.feature.length; i++) {
       if (this.feature[i] instanceof InteriorFeature) {
@@ -63,7 +64,7 @@ public final class Car extends Vehicle {
     return inlist;
   }
 
-  public String toString() {
+  public String toString() { // public toString method that returns the required values
     return super.toString() + "\n" + "Features : " + "\n"
         + getInteriorFeatures() + "\n"
         + getExteriorFeatures() + "\n"

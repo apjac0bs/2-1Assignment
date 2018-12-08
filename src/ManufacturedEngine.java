@@ -1,9 +1,11 @@
 import java.util.*;
 import sun.net.www.content.text.*;
 
+// Create a concrete class named ManufacturedEngine that implements the interface Engine with the following:
+
 public class ManufacturedEngine implements Engine{
 
-  private String engineManufacturer;
+  private String engineManufacturer; // created the following variables
   private Date engineManufacturedDate;
   private String engineMake;
   private String engineModel;
@@ -11,7 +13,7 @@ public class ManufacturedEngine implements Engine{
   private int engineCylinders;
   private String driveTrain;
 
-  public ManufacturedEngine(){
+  public ManufacturedEngine(){ // public default constructor with no parameters
 //    this.engineManufacturer = "Generic";
 //    this.engineManufacturedDate = new Date();
 //    this.engineMake = "Generic";
@@ -29,7 +31,7 @@ public class ManufacturedEngine implements Engine{
     setDriveTrain("Generic");
 
   }
-  public ManufacturedEngine(
+  public ManufacturedEngine( // public overloaded constructor with values for all variables
       String engineManufacturer,
       Date engineManufacturedDate,
       String engineMake,
@@ -54,7 +56,7 @@ public class ManufacturedEngine implements Engine{
     setEngineCylinders(engineCylinders);
     setDriveTrain(driveTrain);
   }
-
+// A public method implementations for all of the public methods found in the Engine interface.
   @Override
   public void setEngineCylinders(int engineCylinders) {
     this.engineCylinders = engineCylinders;
@@ -91,13 +93,13 @@ public class ManufacturedEngine implements Engine{
   }
 
   @Override
-  public String toString() {
-    return "Engine Manufacturer : " + engineManufacturer + "\n"
-        + "Engine Manufactured : " + engineManufacturedDate + "\n"
-        + "Engine Make : " + engineMake + "\n"
-        + "Engine Model : " + engineModel + "\n"
-        + "Engine Type : " + engineType + "\n"
-        + "Engine Cylinders : " + engineCylinders + "\n"
-        + "Drive Train : " + driveTrain;
+  public String toString() { // A public toString method that returns the following:
+    return "Engine Manufacturer : " + engineManufacturer + "\n" // Engine Manufacturer : Generic
+        + "Engine Manufactured : " + engineManufacturedDate + "\n" // Engine Manufactured :
+        + "Engine Make : " + engineMake + "\n" // Engine Make : Generic
+        + "Engine Model : " + engineModel + "\n" // Engine Model : Generic
+        + "Engine Type : " + engineType + "\n" // Engine Type : 85 AKI
+        + "Engine Cylinders : " + engineCylinders + "\n" // Engine Cylinders : 0
+        + "Drive Train : " + driveTrain; // Drive Train : 2WD: Two-Wheel Drives
   }
 }

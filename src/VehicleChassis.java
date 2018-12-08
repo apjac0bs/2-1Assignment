@@ -1,40 +1,29 @@
-/*
- * Create a concrete class named VehicleChassis that implements the interface Chassis with the following:
- *   Create a String named chassisName instance variable.
- *   A public default constructor and an overloaded constructor with the following value:
- *   A String with a parameter value of chassisName
- *   Set the chassisName instance variable in both, use the interface constant as the default String value.
- *   A public method named getChassisType that doesnt have a formal parameter and that returns an instance of the interface Chassis (hint that would be a copy of this class).
- *   A public method setChassisType that takes a String parameter vehicleChassis and that returns a void. It should set the instance variable chassisName.
- *   A public toString method that returns the following:
- *      Chassis Name        : Chassis
- *   Write a static main method that creates two objects, one with the default constructor and the other with the constructor with parameters.  Give sample data for the parameters.
- *
- */
+//  Create a concrete class named VehicleChassis that implements the interface Chassis with the following:
+
 public class VehicleChassis implements Chassis {
 
-  private String chassisName;
+  private String chassisName; // Create a String named chassisName instance variable
 
-  public VehicleChassis() {
+  public VehicleChassis() { // public default constructor 
     setChassisType(chassis);
   }
 
-  public VehicleChassis(String chassisName) {
-    setChassisType(chassisName);
+  public VehicleChassis(String chassisName) { // overloaded constructor with String parameter chassisName
+    setChassisType(chassisName); // set chassiName instance variable 
   }
 
   @Override
-  public Chassis getChassisType() {
+  public Chassis getChassisType() { // public method named getChassisType with no parameters and returns instance of Chassis
     return this;
   }
 
   @Override
-  public void setChassisType(String vehicleChassis) {
-    this.chassisName = vehicleChassis;
+  public void setChassisType(String vehicleChassis) { // public method setChassisType that takes String parameter vehicleChassis
+    this.chassisName = vehicleChassis;                // returns void and sets instance variable chassisName
   }
 
   @Override
-  public String toString() {
+  public String toString() { // A public toString method that returns the following: Chassis Name : Chassis
     return "Chassis Name : " + this.chassisName;
   }
 }
